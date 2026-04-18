@@ -1,0 +1,36 @@
+{
+    "name": "pxt-sen66",
+    "version": "0.0.1",
+    "description": "Support for Sensirion SEN66 Air Quality Sensor (PM, VOC, NOx, RH/T, CO2)",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "sen66.ts",
+        "sen66.cpp",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "5.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj",
+    "authors": [
+        "Bill Siever <bsiever@gmail.com>"
+    ],
+    "card": {
+        "name": "SEN66 (Air Quality + CO2)",
+        "imageUrl": "file:../icon.png",
+        "feedbackUrl": "http://siever.info"
+    }
+}

@@ -1,0 +1,45 @@
+sen66.onError(function (reason) {
+    serial.writeLine(reason)
+})
+
+basic.showNumber(3)
+
+input.onButtonPressed(Button.A, function () {
+    serial.writeValue("pm10", sen66.particleMass(Sen66ParticleMasses.PM10))
+    serial.writeValue("pm25", sen66.particleMass(Sen66ParticleMasses.PM25))
+    serial.writeValue("pm40", sen66.particleMass(Sen66ParticleMasses.PM40))
+    serial.writeValue("pm100", sen66.particleMass(Sen66ParticleMasses.PM100))
+    pause(100)
+    serial.writeValue("temp", sen66.temperature())
+    serial.writeValue("humidity", sen66.humidity())
+    serial.writeValue("VOC", sen66.VOCIndex())
+    serial.writeValue("NOx", sen66.NOxIndex())
+    serial.writeValue("CO2", sen66.CO2())
+    pause(100)
+    serial.writeValue("rawtemp", sen66.rawTemperature())
+    serial.writeValue("rawhumidity", sen66.rawHumidity())
+    serial.writeValue("rawNOx", sen66.rawNOx())
+    serial.writeValue("rawVOC", sen66.rawVOC())
+    serial.writeValue("rawCO2", sen66.rawCO2())
+    pause(100)
+
+    serial.writeValue("nc0p5", sen66.particleCount(Sen66ParticleCounts.PC05))
+    serial.writeValue("nc1p0", sen66.particleCount(Sen66ParticleCounts.PC10))
+    serial.writeValue("nc2p5", sen66.particleCount(Sen66ParticleCounts.PC25))
+    pause(100)
+    serial.writeValue("nc4p0", sen66.particleCount(Sen66ParticleCounts.PC40))
+    serial.writeValue("nc10p0", sen66.particleCount(Sen66ParticleCounts.PC100))
+    pause(100)
+    serial.writeLine("-------------")
+
+}) 
+input.onButtonPressed(Button.B, function () {
+    serial.writeLine(sen66.productName())
+    serial.writeLine(sen66.serialNumber())
+    serial.writeLine("" + (sen66.firmwareVersion()))
+    let stat = sen66.deviceStatus()
+    serial.writeLine("Status: " + stat)
+    serial.writeLine("Fan status " + ((stat & sen66.StatusMasks.FanFailure) == 0) ? "off" : "on");
+    sen66.startFanCleaning()
+})
+sen66.startMeasurements()
