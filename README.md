@@ -22,7 +22,7 @@ Sensor details and data sheets can be found at: [https://sensirion.com/products/
 
 Almost all the parts necessary for this project can be purchased from DigiKey:
 
-1. Sensirion SEN66: https://www.digikey.com/en/products/detail/sensirion-ag/SEN66-SIN-T/22533887
+1. Sensirion SEN66: https://www.digikey.com/en/products/detail/sensirion-ag/SEN66-SIN-T/25700945
 2. A MicroBit Breakout Board: https://www.digikey.com/en/products/detail/sparkfun-electronics/BOB-16446/14557733
 
 There are also a few parts that are available in a variety of kits and from other sources.  Below are variations that are available via Amazon:
@@ -176,7 +176,7 @@ Get the raw NOx ticks (not an index).  The raw value is proportional to the loga
 sen66.rawCO2(): number
 ```
 
-Get the raw (uninterpolated) CO₂ concentration in ppm, updated every 5 seconds. Returns `NaN` on error.
+Get the raw (un-interpolated) CO₂ concentration in ppm, updated every 5 seconds. Returns `NaN` on error.
 
 # Raw Temperature
 
