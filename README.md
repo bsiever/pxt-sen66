@@ -144,7 +144,7 @@ Stop making measurements and return to low-power idle mode.
 sen66.onError(errCallback: (reason: string) => void) : void
 ```
 
-Respond to any errors.  `reason` will be a description of the error. 
+Respond to any errors.  `reason` will be a description of the error.
 
 # Device Status
 
@@ -240,7 +240,7 @@ Clear the device status.
 sen66.startFanCleaning(): void
 ```
 
-Start cleaning the fan. Takes ~10s and all values are invalid while cleaning. 
+Start cleaning the fan. Takes ~10s and all values are invalid while cleaning.
 
 Fan will automatically be cleaned if the device is continuously running without reset/restart for 1 week (168 hours).
 
