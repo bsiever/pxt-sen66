@@ -28,7 +28,7 @@ enum Sen66ParticleCounts {
  */
 //% color=#398BB4
 //% icon="\uf0c2"
-//% block="SEN66"
+//% block="Sen66"
 namespace sen66 {
 
     export enum StatusMasks {
@@ -205,7 +205,7 @@ namespace sen66 {
      * Set a handler for errors 
      * @param errCallback The error handler 
      */
-    //% block="SEN66 error"
+    //% block="sen66 error"
     //% draggableParameters="reporter" weight=0
     //% weight=100
     export function onError(errCallback: (reason: string) => void) {
