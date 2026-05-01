@@ -205,7 +205,6 @@ namespace sen66 {
      * Set a handler for errors 
      * @param errCallback The error handler 
      */
-    //% blockId="error" block="SEN66 error"
     //% draggableParameters="reporter" weight=0
     //% weight=100
     export function onError(errCallback: (reason: string) => void) {
