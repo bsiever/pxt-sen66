@@ -1,6 +1,6 @@
 {
     "name": "pxt-sen66 - Copy",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Support for Sensirion SEN66 Air Quality Sensor (PM, VOC, NOx, RH/T, CO2)",
     "license": "MIT",
     "dependencies": {
